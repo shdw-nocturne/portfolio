@@ -1,0 +1,27 @@
+name: Auto Update Branch
+
+# Trigger when main branch is updated
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch full history to allow branch operations
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Merge main into target branch
+        run: |
+          git checkout target-branch
+          git merge origin/main --no-edit
+          git push origin target-branch

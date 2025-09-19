@@ -22,6 +22,14 @@ const Projects = () => {
       link: null,
       status: "Ongoing",
     },
+    {
+      id: "3",
+      title: "Antimony Technologies",
+      description:
+        "A modern, responsive landing page for Antimony Technologies built with ReactJS, ShadCN UI, and HeroUI. It showcases the company's services, mission, and contact information in a clean, user-friendly layout. The design is fully responsive, ensuring an optimal experience across all devices. Built with reusable components, it emphasizes modern UI practices and professional aesthetics",
+      link: "https://antimonytechnologies.com/",
+      status: "Completed",
+    },
     // {
     //   id: "2",
     //   title: "Retrieval Augmented Generation Chatbot",
