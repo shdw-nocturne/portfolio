@@ -55,6 +55,7 @@ const Projects = () => {
         <div className="flex items-center gap-3">
           <Construction className="h-6 w-6 text-foreground" />
           <p className={title({ size: "xs" })}>Projects</p>
+          <p className={title({ size: "xs" })}>{recentProjectsList.length}</p>
         </div>
       </CardHeader>
       <CardBody>
